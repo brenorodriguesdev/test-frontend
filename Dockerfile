@@ -3,6 +3,8 @@ FROM node:20-alpine
 WORKDIR /app
 
 COPY .output/ ./
+COPY node_modules/ ./node_modules/
+
 
 EXPOSE 3001
 
