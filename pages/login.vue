@@ -71,7 +71,6 @@ const handleLogin = async () => {
   }
 
 }
-
 </script>
 
 <template>
@@ -107,6 +106,14 @@ const handleLogin = async () => {
 
         </CardFooter>
       </form>
+
+      <div class="mb-8 text-center text-sm">
+        Don't have an account?
+        <NuxtLink to="/register" class="underline">
+          Sign up
+        </NuxtLink>
+      </div>
+
     </Card>
   </div>
 </template>

@@ -11,6 +11,9 @@ import { validateRequiredFields, validateEmailField } from '@/shared'
 import { useToast } from '@/components/ui/toast/use-toast'
 import { usersControllerSignUp } from '@/api/generated'
 import { Loader2 } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const { toast } = useToast()
 
@@ -66,7 +69,6 @@ const handleRegister = async () => {
     isLoading.value = false
   }
 }
-
 </script>
 
 <template>
@@ -103,6 +105,15 @@ const handleRegister = async () => {
 
         </CardFooter>
       </form>
+
+
+      <div class="mb-8 text-center text-sm">
+        Already have an account? 
+        <NuxtLink to="/login" class="underline">
+          Sign in
+        </NuxtLink>
+      </div>
+      
     </Card>
   </div>
 </template>
