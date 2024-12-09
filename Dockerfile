@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY .output/ ./
 
-RUN npm install --production
+RUN npm install
 
 EXPOSE 3001
 
