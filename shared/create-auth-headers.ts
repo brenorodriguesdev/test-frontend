@@ -1,4 +1,4 @@
-import { useCookie } from '#imports';
+import { useCookie } from 'nuxt/app';
 
 export const createAuthHeaders = (): Record<string, string> => {
   const authToken = useCookie('authToken').value;

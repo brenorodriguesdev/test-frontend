@@ -1,5 +1,5 @@
 import { jwtDecode } from 'jwt-decode';
-import { useCookie } from '#imports';
+import { useCookie } from 'nuxt/app';
 
 export function isAuthenticated(): boolean {
   const authToken = useCookie('authToken').value;
