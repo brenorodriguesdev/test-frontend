@@ -2,9 +2,9 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY .output/ ./
-COPY node_modules/ ./node_modules/
+COPY . .
 
+WORKDIR /app/.output
 
 EXPOSE 3001
 
