@@ -1,4 +1,5 @@
 import { jwtDecode } from 'jwt-decode';
+import { useCookie } from '#imports';
 
 export function isAuthenticated(): boolean {
   const authToken = useCookie('authToken').value;
