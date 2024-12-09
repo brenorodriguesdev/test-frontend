@@ -1,14 +1,13 @@
-FROM node:22
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY .output/ ./
 
 RUN npm install
 
 EXPOSE 3001
 
-ENV HOST=0.0.0.0
-ENV PORT=3001
+ENV NITRO_PORT=3001
 
-CMD ["npm", "run", "dev"]
+CMD ["node", "server/index.mjs"]

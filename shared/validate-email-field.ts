@@ -1,4 +1,5 @@
-import { isEmail } from "validator"
+import validator from 'validator';
+const { isEmail } = validator;
 
 export const validateEmailField = (data: any) => {
     if (!data['email'] || !isEmail(data['email'])) {
