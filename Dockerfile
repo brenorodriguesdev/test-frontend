@@ -1,13 +1,16 @@
 FROM node:20-alpine
 
+# Define o diretório de trabalho
 WORKDIR /app
 
-COPY .output/ ./
-
-RUN npm install
+# Copia todos os arquivos do projeto (exceto os listados no .dockerignore)
+COPY . .
 
 EXPOSE 3001
 
-ENV NITRO_PORT=3001
+# Define a variável de ambiente para o Nuxt ouvir em qualquer IP
+ENV HOST=0.0.0.0
+ENV PORT=3001
 
-CMD ["node", "server/index.mjs"]
+# Comando para iniciar o servidor de desenvolvimento
+CMD ["npm", "run", "dev"]
