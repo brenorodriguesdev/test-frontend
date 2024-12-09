@@ -15,9 +15,10 @@ jobs:
         with:
           node-version: 20
       - uses: actions/checkout@v3
+      - run: echo "${{ secrets.ENV }}" > .env
       - run: npm install
       - run: npm run build
       - run: docker rmi -f test-frontend:latest
       - run: docker build -t test-frontend:latest .
       - run: docker rm -f test-frontend
-      - run: docker run -d --name test-frontend --network host -p 3001:3000 test-frontend:latest
+      - run: docker run -d --name test-frontend --network host -p 3001:3001 test-frontend:latest
