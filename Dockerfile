@@ -2,9 +2,9 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY .output/ ./
 
-WORKDIR /app/.output
+RUN npm install --production
 
 EXPOSE 3001
 
