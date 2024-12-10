@@ -1,5 +1,5 @@
 export const customFetch = async (url: string, options: RequestInit = {}) => {
-  const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.BASE_URL || 'http://54.163.26.152:3000';
   const response = await fetch(`${baseUrl}${url}`, {
     ...options,
     headers: {
