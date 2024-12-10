@@ -183,7 +183,7 @@ const handleSubmit = async () => {
       <DialogHeader>
         <DialogTitle>Update Task</DialogTitle>
         <DialogDescription>
-          Add a new task to your list. Click save when you're done.
+          Update your task and click save when you're done.
         </DialogDescription>
       </DialogHeader>
       <GridForm />
@@ -196,7 +196,7 @@ const handleSubmit = async () => {
       <DrawerHeader class="text-left">
         <DrawerTitle>Add Task</DrawerTitle>
         <DrawerDescription>
-          Add a new task to your list. Click save when you're done.
+          Update your task and click save when you're done.
         </DrawerDescription>
       </DrawerHeader>
       <GridForm />
